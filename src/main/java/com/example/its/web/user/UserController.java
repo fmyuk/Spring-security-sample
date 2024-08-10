@@ -34,6 +34,8 @@ public class UserController {
         if (result.hasErrors()) {
             return showCreationForm(form);
         }
+
+        service.create(form.getUsername(), form.getPassword());
         return "redirect:/users";
     }
 }
