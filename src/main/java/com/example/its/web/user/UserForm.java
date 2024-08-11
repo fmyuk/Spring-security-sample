@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 @Data
 @RequiredArgsConstructor
@@ -15,5 +16,6 @@ public class UserForm {
     private String username;
 
     @NotBlank
+    @Size(min = 12, max = 128)
     private String password;
 }
